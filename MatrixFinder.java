@@ -28,7 +28,7 @@ public class MatrixFinder {
      // Parameters: 2D array, desired value(int)
      // Output: coordinates of the desired value, or (-1, -1) if not found and the runTime of search() in milliseconds
      public static String search(int[][] arr, int x) {
-	  long startTime = System.currentTimeMillis();
+	  long startTime = System.nanoTime();
 	  long endTime;
           int size = arr.length; // stores size of array
           int row = 0; // row counter
@@ -38,7 +38,7 @@ public class MatrixFinder {
           // One single iteration = O(n) run time
           while (row < size && col >= 0) { // while row and column are valid
                if (size == 0) { // if size of array is 0, return (-1, -1)
-		   endTime = System.currentTimeMillis();
+		   endTime = System.nanoTime();
 		   return "(-1, -1)" + " Runtime was: " + (endTime - startTime);
                }
 
@@ -46,14 +46,14 @@ public class MatrixFinder {
                // array or less than the smallest value of the array,
                // return (-1, -1)
                if (x > arr[size - 1][size - 1] || x < arr[0][0]) {
-		    endTime = System.currentTimeMillis();
+		    endTime = System.nanoTime();
                     return "(-1, -1)" + " Runtime was: " + (endTime - startTime);
                }
 
                // if the current index (top-rightmost element) is
                // equal to the input, then return the coordinates
                if (x == arr[row][col]) {
-		    endTime = System.currentTimeMillis();
+		    endTime = System.nanoTime();
                     return "(" + row + ", " + col + ")" + " Runtime was: " + (endTime - startTime);
                } // if input is smaller than value at index, move left a column
                else if (x < arr[row][col]) {
@@ -63,7 +63,7 @@ public class MatrixFinder {
                     row += 1;
                }
           } 
-	  endTime = System.currentTimeMillis();
+	  endTime = System.nanoTime();
 	  return "(-1, -1)" + " Runtime was: " + (endTime - startTime); // at this point, the value is not found so (-1, -1)
      }
 					       
@@ -157,7 +157,19 @@ public class MatrixFinder {
 	  System.out.println("\n~~Test 5~~");
           System.out.println("\nNOTE: the printed array doesn't look rectangular, but it is just misalligned");
 	  populate(test4);
-	  //ystem.out.println(toString(test4));
-	  System.out.println("Search: 100000000: " + search(test4, 100000000));  
+	  //System.out.println(toString(test4));
+	  System.out.println("Search: 100000000: " + search(test4, 100000000));
+
+	  //generator
+	  /*for (int n = 5000; n < 5501; n++) {
+	      int[][] ary = new int[n][n];
+	      System.out.println("This is array " + n);
+	      populate(ary);
+	      System.out.println("Search: " + n + search(ary, 0));
+	      }*/
+	  int[][] ary = new int[100][100];
+	  populate(ary);
+	  System.out.println(toString(ary));
+	  System.out.println("Search: 1 " + search(ary, 0));
      }
 }
