@@ -26,8 +26,8 @@ decisions take place in the while loop:
 * if value at index is larger than desired value: move left a column
 
 Based on various tests, we know our algorithm works as intended. For our lab, we generated matrices increasing by 20 elements each time 
-that had 7000 to 13000 elements. We measured the runtime of searching for the bottom left element of each matrix
-1000 times by using a for loop and Java's built in nanoTime. After 1000 calls to our search() method for each array, we divided the total runtime by 1000 to find the average time of a search of the bottom left element of one matrix. Then, the size of the array is SOP'ed along with its average runtime, separated by commas, in order to be able to import it into Google Spreadsheets. This was repeated for each matrix.
+that had 7000 to 13000 elements. We measured the runtime of searching for the bottom right element of each matrix
+1000 times by using a for loop and Java's built in nanoTime. After 1000 calls to our search() method for each array, we divided the total runtime by 1000 to find the average time of a search of the bottom right element of one matrix. Then, the size of the array is SOP'ed along with its average runtime, separated by commas, in order to be able to import it into Google Spreadsheets. This was repeated for each matrix.
 
 ### Results
 -Spreadsheets w/ Graph:
