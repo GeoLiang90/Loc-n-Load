@@ -30,7 +30,7 @@ that had 7000 to 13000 elements. We measured the runtime of searching for the bo
 1000 times by using a for loop and Java's built in nanoTime. After 1000 calls to our search() method for each array, we divided it by 1000 to find the average time of a search of the bottom left element of one matrix. Then, the size of the array is SOP'ed along with its average runtime, separated by commas, in order to be able to import it into Google Spreadsheets. This was repeated for each matrix.
 
 ### Results
-# Spreadsheets w/ Graph:
+-Spreadsheets w/ Graph:
 https://goo.gl/fXdtpB
 ![](graph/MatrixFinderGraph.PNG)
 
