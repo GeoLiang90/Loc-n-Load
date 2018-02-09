@@ -4,10 +4,6 @@ Xiaojie(Aaron) Li
 Jackie Li
 <br>
 George Liang
-# Spreadsheets w/ Graph:
-https://goo.gl/fXdtpB
-![](graph/MatrixFinderGraph.PNG)
-
 ### Hypothesis
 Our code operates through the list once, starting at the top right corner. As long as the index has not been discovered, 
 and the value we are searching for is valid, we continue to search for the target, by using the rules established by our algorithm. We hypothesize that our search algorithm runs in linear time because even for the worst-case scenario, the number of elements iterated never meets or exceeds O(n^2).
@@ -33,6 +29,10 @@ Based on various tests, we know our algorithm works as intended. For our lab, we
 that had 7000 to 13000 elements. We measured the runtime of searching for the bottom left element of each matrix
 1000 times by using a for loop and Java's built in nanoTime. After 1000 calls to our search() method for each array, we divided it by 1000 to find the average time of a search of the bottom left element of one matrix. Then, the size of the array is SOP'ed along with its average runtime, separated by commas, in order to be able to import it into Google Spreadsheets. This was repeated for each matrix.
 
+### Results
+# Spreadsheets w/ Graph:
+https://goo.gl/fXdtpB
+![](graph/MatrixFinderGraph.PNG)
 
-### Data Analysis
+### Conclusions
 Although our data often fluctuate, this was expected because hidden background processes slow down Java's runtime. Based on the line of best fit drawn in our Google Spreadsheet (which is based on our csv file), our algorithm follows a linear slope, which provides evidence that our algorithm follows a linear runtime. However, we don't believe this evidence is enough to clearly say that the search algorithm runs in linear time because of the various fluctuations and independent factors at play during the experiment.   
