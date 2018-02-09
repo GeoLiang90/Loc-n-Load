@@ -6,7 +6,7 @@ Jackie Li
 George Liang
 ### Hypothesis
 Our code operates through the list once, starting at the top right corner. As long as the index has not been discovered, 
-and the value we are searching for is valid, we continue to search for the target, by using the rules established by our algorithm. We hypothesize that our search algorithm runs in linear time because even for the worst-case scenario, the number of elements iterated never meets or exceeds O(n^2).
+and the value we are searching for is valid, we continue to search for the target, by using the rules established by our algorithm. We hypothesize that our search algorithm runs in linear time because even for the worst-case scenario, the number of elements iterated never meets or exceeds O(n<sup>2</sup>).
 
 ### Background
 Our inspiration for this algorithm came from the telescope problem from the final. In the problem, we were asked to be iterate
