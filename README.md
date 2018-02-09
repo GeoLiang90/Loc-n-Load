@@ -1,5 +1,5 @@
 # Loc-n-Load -- MatrixFinder
-Aaron Li
+Xiaojie(Aaron) Li
 <br>
 Jackie Li
 <br>
@@ -15,8 +15,8 @@ just go down the matrix and analyze backwards.
 
 ### Background
 Our inspiration for this algorithm came from the telescope problem from the final. In the problem, we were asked to be iterate
-through a matrix in a ladder-like formation. We are incorporating the same algorithm, where we serpentine through the matrix, 
-searching for our desired value. 
+through a matrix in a ladder-like formation. We are incorporating a similar algorithm, where we serpentine through the matrix, 
+searching for our desired value, except the indices move according to value comparisons instead of always in a zig-zag fashion. 
 
 ### Experiment Methodology
 First, check if the desired value is even possibly within the array. This is
@@ -30,15 +30,12 @@ decisions take place in the while loop:
 * if value at index is smaller than desired value: move down a row
 * if value at index is larger than desired value: move left a column
 
-Based on small tests, we know our algorithm works. We generated matrices increasing by 20 elements each time 
-that had 7000 to 13000 elements  We measured the runtime of searching for the bottom left element of each matrix
-1000 times by using a for loop. We used the for loop because of its O(1) runtime which won't cost us too much to run
-the same call 1000 times. Using the saved runtime for 1000 calls to our search() method, we divided it by 1000 to find
-the average time of a search of the bottom left element of one matrix. This was repeated for each matrix incremented by
-20 elements. 
+Based on various tests, we know our algorithm works as intended. For our lab, we generated matrices increasing by 20 elements each time 
+that had 7000 to 13000 elements. We measured the runtime of searching for the bottom left element of each matrix
+1000 times by using a for loop and Java's built in nanoTime. After 1000 calls to our search() method for each array, we divided it by 1000 to find the average time of a search of the bottom left element of one matrix. Then, the size of the array is SOP'ed along with its average runtime, separated by commas, in order to be able to import it into Google Spreadsheets. This was repeated for each matrix.
 
 
 ### Data Analysis
 Although our data often fluctuate, this was expected because hidden background processes slow down Java's runtime. Based on the line of best fit drawn in 
-our Google Spreadsheet (which is based on our csv file), our algorithm always revolves around a linear slope, which means that our algorithm always 
-follows a linear runtime. Therefore, we can conclude that our algorithm runs in O(n) or linear time. 
+our Google Spreadsheet (which is based on our csv file), our algorithm follows a linear slope, which provides evidence that our algorithm  
+follows a linear runtime.  
