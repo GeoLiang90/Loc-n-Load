@@ -29,7 +29,15 @@ decisions take place in the while loop:
 * if value at index is smaller than desired value: move down a row
 * if value at index is larger than desired value: move left a column
 
+Based on small tests, we know our algorithm works. We generated matrices increasing by 20 elements each time 
+that had 7000 to 13000 elements  We measured the runtime of searching for the bottom left element of each matrix
+1000 times by using a for loop. We used the for loop because of its O(1) runtime which won't cost us too much to run
+the same call 1000 times. Using the saved runtime for 1000 calls to our search() method, we divided it by 1000 to find
+the average time of a search of the bottom left element of one matrix. This was repeated for each matrix incremented by
+20 elements. 
+
 
 ### Data Analysis
-Although our data often fluctuate, this is to be expected. Our algorithm always revolve around a linear slope, and because 
-of this the data follows a linear succession. Our search method works, meaning it is O(n) time.
+Although our data often fluctuate, this was expected because hidden background processes slow down Java's runtime. Based on the line of best fit drawn in 
+our Google Spreadsheet (which is based on our csv file), our algorithm always revolves around a linear slope, which means that our algorithm always 
+follows a linear runtime. Therefore, we can conclude that our algorithm runs in O(n) or linear time. 
