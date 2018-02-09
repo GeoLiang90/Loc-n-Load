@@ -27,7 +27,7 @@ public class MatrixFinder {
    
      // Parameters: 2D array, desired value(int)
      // Output: coordinates of the desired value, or (-1, -1) if not found and the runTime of search() in milliseconds
-     public static String search(int[][] arr, int x) {
+     public static String search(long[][] arr, long x) {
 	  long startTime = System.nanoTime();
 	  long endTime;
           int size = arr.length; // stores size of array
@@ -68,8 +68,8 @@ public class MatrixFinder {
      }
 					       
     //Popualtes a 2D array with n * n elements that increases from left to right and top to bottom 
-    public static void populate(int[][] arr){
-	int popVal = 0;
+    public static void populate(long[][] arr){
+	long popVal = 0;
 	for (int r = 0; r < arr.length; r++){
 	    popVal *= 1.1;
        
@@ -83,7 +83,7 @@ public class MatrixFinder {
 
   
      // Strigifies the 2D arrays
-     public static String toString(int[][] arr) {
+     public static String toString(long[][] arr) {
           String out = "";
 
           for (int i = 0; i < arr.length; i++) {
@@ -102,7 +102,7 @@ public class MatrixFinder {
      public static void main(String[] args) {
 
           // Test 1
-          int[][] test = new int[3][3];
+          long[][] test = new long[3][3];
           for (int i = 0; i < 3; i++) {
                for (int x = 0; x < 3; x++) {
                     test[i][x] = (i * 2) + x;
@@ -115,7 +115,7 @@ public class MatrixFinder {
           System.out.println("Search: 7: " + search(test, 7)); // should return (-1, -1)
 
           // Test 2
-          int[][] test1 = new int[2][2];
+          long[][] test1 = new long[2][2];
           for (int i = 0; i < 2; i++) {
                for (int x = 0; x < 2; x++) {
                     test1[i][x] = (i * 2) + x;
@@ -127,7 +127,7 @@ public class MatrixFinder {
           System.out.println("Search: 3: " + search(test1, 3)); // should return (1, 1)
 
           // Test 3
-          int[][] test2 = new int[1][1];
+          long[][] test2 = new long[1][1];
           for (int i = 0; i < 1; i++) {
                for (int x = 0; x < 1; x++) {
                     test2[i][x] = (i * 2) + x;
@@ -139,7 +139,7 @@ public class MatrixFinder {
           System.out.println("Search: 0: " + search(test2, 0)); // should return (0, 0)
 
           // Test 4
-          int[][] test3 = new int[8][8];
+          long[][] test3 = new long[8][8];
           for (int i = 0; i < 8; i++) {
                for (int x = 0; x < 8; x++) {
                     test3[i][x] = (i * 2) + x;
@@ -153,23 +153,25 @@ public class MatrixFinder {
           System.out.println("Search: 23: " + search(test3, 23)); // should return (-1, -1)
 
 	  // Test 5 
-	  int[][] test4 = new int [20000][20000];
+	  /*long[][] test4 = new long [20000][20000];
 	  System.out.println("\n~~Test 5~~");
           System.out.println("\nNOTE: the printed array doesn't look rectangular, but it is just misalligned");
 	  populate(test4);
 	  //System.out.println(toString(test4));
-	  System.out.println("Search: 100000000: " + search(test4, 100000000));
-
+	  System.out.println("Search: 100000000: " + search(test4, 18));
+	  */
 	  //generator
-	  /*for (int n = 5000; n < 5501; n++) {
-	      int[][] ary = new int[n][n];
+	  for (int n = 0; n < 1001; n++) {
+	      long[][] ary = new long[n][n];
 	      System.out.println("This is array " + n);
 	      populate(ary);
-	      System.out.println("Search: " + n + search(ary, 0));
-	      }*/
-	  int[][] ary = new int[100][100];
+	      //System.out.println(toString(ary));
+	      System.out.println("Search: 0 " + n + search(ary, 0));
+	      }
+	  /*long[][] ary = new long[150][150];
 	  populate(ary);
-	  System.out.println(toString(ary));
-	  System.out.println("Search: 1 " + search(ary, 0));
+	  //System.out.println(toString(ary));
+	  System.out.println("Search: 30 " + search(ary, 30));
+	  */
      }
 }
