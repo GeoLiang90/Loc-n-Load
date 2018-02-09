@@ -36,6 +36,4 @@ that had 7000 to 13000 elements. We measured the runtime of searching for the bo
 
 
 ### Data Analysis
-Although our data often fluctuate, this was expected because hidden background processes slow down Java's runtime. Based on the line of best fit drawn in 
-our Google Spreadsheet (which is based on our csv file), our algorithm follows a linear slope, which provides evidence that our algorithm  
-follows a linear runtime.  
+Although our data often fluctuate, this was expected because hidden background processes slow down Java's runtime. Based on the line of best fit drawn in our Google Spreadsheet (which is based on our csv file), our algorithm follows a linear slope, which provides evidence that our algorithm follows a linear runtime. However, we don't believe this evidence is enough to clearly say that the search algorithm runs in linear time because of the various fluctuations and independent factors at play during the experiment.   
