@@ -6,7 +6,7 @@ Jackie Li
 George Liang
 # Spreadsheets w/ Graph:
 https://goo.gl/fXdtpB
-![](images/MatrixFinderGraph.png)
+![](graph/MatrixFinderGraph.png)
 
 ### Hypothesis
 Our code operates through the list once, checking each item in our matrix. As long as the index has not been discovered, 
